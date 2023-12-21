@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./Preferences.css";
+import "./Logo.css";
 
 export default function Preferences(props) {
   const [localPrefs, setLocalPrefs] = useState(props.preferences);
@@ -28,6 +30,7 @@ export default function Preferences(props) {
           color:
           <select
             value={localPrefs.color}
+            name="colorField"
             onChange={(e) =>
               setLocalPrefs({ ...localPrefs, color: e.target.value })
             }
